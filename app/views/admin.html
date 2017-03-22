@@ -1,0 +1,66 @@
+<div class='sth-admin'>
+	<div class="release">
+		<span>新闻列表</span>
+		<input type="button" value="发布" />
+	</div>
+	<div id="content">
+		<div id="image-wrap"></div>
+		<input type="button" value="选择图片" id="but" />
+		<input type="file" id="file">
+	</div>
+	<div class="releaseContent">
+		<p>新闻内容</p>
+		<textarea></textarea>
+	</div>
+	<div class="releaseContent">
+		<p>已有新闻</p>
+		<ul class="ul" ng-repeat="a in data">
+			<li>
+				<p><span><img src="../images/a (1).gif"/></span><span>啊发顺丰发发生发发发发沙发怕就怕及哦啊跑福安市</span></p>
+				<p></p>
+			</li>
+		</ul>
+	</div>
+	<div class="footers">
+		<ul>
+			<li ui-sref="admin">新闻</li>
+			<li ui-sref="manage">案例</li>
+			<li ui-sref='words'>留言</li>
+			<li ui-sref='home'>首页</li>
+		</ul>
+	</div>
+	<div class="show">
+		<p>详情</p>
+		<p>删除</p>
+		<p class="up">取消</p>
+	</div>
+	<div class="op">
+	</div>
+</div>
+<script>
+	$(document).ready(function() {
+			$('.ul>li').click(function() {
+				$('.show').css({ 'bottom': '0' })
+				$('.show').css({ 'transition': '.5s' })
+				$('.op').css({ 'transition': '.2s' })
+				$('.op').css({ 'display': 'block' })
+			})
+			$('.up').click(function() {
+				$('.show').css({ 'bottom': '-100%' })
+				$('.show').css({ 'transition': '.5s' })
+				$('.op').css({ 'transition': '.2s' })
+				$('.op').css({ 'display': 'none' })
+
+			})
+			$.imageFileVisible({
+
+				wrapSelector: "#image-wrap",
+				fileSelector: "#file",
+				width: 10 + 'rem',
+				height: 5 + 'rem'
+			});
+			$('#file').click(function() {
+				$('#image-wrap').html('')
+			})
+		});
+</script>

@@ -1,0 +1,55 @@
+<div class="words" ng-controller="yan">
+	<div class="release">
+		<span>留言列表</span>
+	</div>
+	<div class="wordsList">
+		<ul class="ul">
+			<li>wwww</li>
+			<li ng-repeat="a in arr">{{a.content}}<a href="javascript:;" ng-click="shanchu($index)">删除</a></li>
+		</ul>
+	</div>
+	<div class="footers">
+		<ul>
+			<li ui-sref="admin">新闻</li>
+			<li ui-sref="manage">案例</li>
+			<li ui-sref='words'>留言</li>
+			<li ui-sref='home'>首页</li>
+		</ul>
+	</div>
+	<div class="show">
+		<p>详情</p>
+		<p>删除</p>
+		<p class="up">取消</p>
+	</div>
+	<div class="op">
+	</div>
+</div>
+
+<script>
+	$(document).ready(function() {
+			$('.ul li').click(function() {
+				alert(4)
+				$('.show').css({ 'bottom': '0' })
+				$('.show').css({ 'transition': '.5s' })
+				$('.op').css({ 'transition': '.2s' })
+				$('.op').css({ 'display': 'block' })
+			})
+			$('.up').click(function() {
+				$('.show').css({ 'bottom': '-100%' })
+				$('.show').css({ 'transition': '.5s' })
+				$('.op').css({ 'transition': '.2s' })
+				$('.op').css({ 'display': 'none' })
+
+			})
+			$.imageFileVisible({
+
+				wrapSelector: "#image-wrap",
+				fileSelector: "#file",
+				width: 10 + 'rem',
+				height: 5 + 'rem'
+			});
+			$('#file').click(function() {
+				$('#image-wrap').html('')
+			})
+		});
+</script>

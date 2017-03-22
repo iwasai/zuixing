@@ -1,0 +1,34 @@
+<div class="anli">
+	<div class="tatle">
+		<div class="left">
+			<span class="span1"></span>
+			<span class="span2"></span>
+		</div>
+		精选案例
+		<div class="right">
+			<img src="../images/right.jpg">
+		</div>
+	</div>
+	<ul>
+		<li><a href="../images/jx1.jpg"><img src="../images/jx1.jpg"></a></li>
+		<li><a href="../images/jx2.jpg"><img src="../images/jx2.jpg"></a></li>
+		<li><a href="../images/jx3.jpg"><img src="../images/jx3.jpg"></a></li>
+		<li><a href="../images/jx4.jpg"><img src="../images/jx4.jpg"></a></li>
+	</ul>
+	<p>加载更多</p>
+	<div class="top">
+		<a href="javascript:;" id="Top">Top<img src="../images/top.jpg"></a>
+	</div>
+	<div ui-view></div>
+</div>
+<script>
+	function Top(){
+			$('body').animate({scrollTop:0});
+		}
+		$("#Top").on({
+			'touchstart':function(){
+				Top();	
+			}
+		})
+	
+</script>

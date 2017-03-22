@@ -1,0 +1,228 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "微软雅黑";
+    .fs(14rem);
+}
+.fs(@f:0) {
+    font-size: @f/20/2;
+}
+.w(@w:0) {
+    width: @w/20/2;
+}
+.h(@h:0) {
+    height: @h/20/2;
+}
+.lh(@lh:0) {
+    line-height: @lh/20/2;
+}
+.t(@t:0) {
+    top: @t/20/2;
+}
+.sth-admin {
+    width: 100%;
+    margin-bottom: 20%;
+}
+.release {
+    background: #ce2122;
+    padding: 0 5%;
+    > span {
+        .fs(30rem);
+        .lh(80rem);
+        color: #FFF;
+    }
+    input {
+        float: right;
+        .w(150rem);
+        .h(70rem);
+        .fs(32rem);
+        margin-top: 1%;
+        border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
+        color: #ce2122;
+    }
+}
+#content {
+    width: 100%;
+    padding: 5%;
+    .h(265rem);
+    #image-wrap {
+        .w(400rem);
+        .h(200rem);
+        background: #CCCCCC;
+    }
+    > div {
+        float: left;
+        margin-right: 2%;
+        border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
+        > img {
+            .w(400rem);
+            .h(200rem);
+            border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
+        }
+    }
+    > input:nth-child(2) {
+        margin-top: 10%;
+        .w(150rem);
+        .h(80rem);
+        margin-top: 1%;
+        border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
+        color: #fc5265;
+        .fs(28rem);
+    }
+    #file {
+        margin-left: 3%;
+        margin-top: -11%;
+        .w(150rem);
+        .h(80rem);
+        opacity: 0;
+
+    }
+}
+.releaseContent {
+    > p {
+        padding: 0 5%;
+        width: 100%;
+        .h(80rem);
+        background: #ce2122;
+        .fs(30rem);
+        .lh(80rem);
+        color: #FFF;
+        margin-bottom: 5%;
+    }
+    > textarea {
+        margin-left: 5%;
+        .w(580rem);
+        .h(200rem);
+        margin-bottom: 2%;
+    }
+    > ul {
+        width: 100%;
+        padding: 0 5%;
+        > li {
+            border-bottom: .05rem solid #CCCCCC;
+            padding-top: 3%;
+            > p {
+                > span:nth-child(1) {
+                        .w(200rem);
+                        .h(130rem);
+                        margin-right: 2%;
+                    > img {
+                        .w(200rem);
+                        .h(130rem);
+                    }
+                }
+                >span:nth-child(2){
+                    display: inline-block;
+                    .w(360rem);
+                     .h(130rem);
+                     .lh(40rem);
+                     .fs(28rem)
+                }
+            }
+        }
+        > li:last-child{
+            border-bottom: 0rem solid #CCCCCC;
+        }
+    }
+
+}
+.footers{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    .h(100rem);
+     background: #ce2122;
+    >ul{
+        >li{
+            float: left;
+            .fs(30rem);
+            .h(100rem);
+            .lh(100rem);
+             color: #FFF;
+            width: 25%;
+            .w(212rem);
+            text-align: center;
+        }
+    }
+}
+.show{
+    width: 100%;
+   .h(350rem);
+    position: fixed;
+    left: 0;
+    bottom:-100%;
+    z-index: 999;
+    padding-top: 2%;
+    >p{
+        width: 90%;
+        .h(80rem);
+        .lh(80rem);
+        .fs(28rem);
+        background: #FFFFFF;
+         margin: 3% auto;
+          border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+          text-align: center;
+    }
+}
+.op{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    background: rgba(0,0,0,.5);
+}
+.manage{
+    padding-bottom: 158%;
+}
+.chart{
+    width: 100%;
+    ul{
+        >li{
+            width: 45%;
+            .h(150rem);
+            float: left;
+            margin-left: 3%;
+            margin-bottom: 5%;
+            >img{
+               width: 100%;
+                .h(150rem);
+                 float: left; 
+            }
+        }
+    }
+}
+.words{
+    width: 100%;
+    padding-bottom: 20%;
+    .wordsList{
+        width: 100%;
+        padding: 0 5%;
+        >ul{
+            >li{
+                margin-top: 5%;
+                .fs(28rem)
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

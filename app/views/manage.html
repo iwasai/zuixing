@@ -1,0 +1,73 @@
+<div class="manage">
+	<div class="release">
+		<span>案例列表</span>
+		<input type="button" value="发布" />
+	</div>
+	<div id="content">
+		<div id="image-wrap"></div>
+		<input type="button" value="添加案例" id="but" />
+		<input type="file" id="file">
+	</div>
+	<div class="case releaseContent">
+		<p>已有案例</p>
+	</div>
+	<div class="chart">
+		<ul class="ul">
+			<li><img src="../images/a (1).gif"/></li>
+			<li><img src="../images/a (1).gif"/></li>
+			<li><img src="../images/a (1).gif"/></li>
+			<li><img src="../images/a (1).gif"/></li>
+			<li><img src="../images/a (1).gif"/></li>
+			<li><img src="../images/a (1).gif"/></li>
+			<li><img src="../images/a (1).gif"/></li>
+			<li><img src="../images/a (1).gif"/></li>
+			<li><img src="../images/a (1).gif"/></li>
+			<li><img src="../images/a (1).gif"/></li>
+		</ul>
+	</div>
+	<div class="footers">
+		<ul>
+			<li ui-sref="admin">新闻</li>
+			<li ui-sref="manage">案例</li>
+			<li ui-sref='words'>留言</li>
+<<<<<<< HEAD
+			<li ui-sref='home'>首页</li>
+=======
+>>>>>>> origin/master
+		</ul>
+	</div>
+	<div class="show">
+		<p>详情</p>
+		<p>删除</p>
+		<p class="up">取消</p>
+	</div>
+	<div class="op">
+	</div>
+</div>
+<script>
+	$(document).ready(function() {
+			$('.ul>li').click(function() {
+				$('.show').css({ 'bottom': '0' })
+				$('.show').css({ 'transition': '.5s' })
+				$('.op').css({ 'transition': '.2s' })
+				$('.op').css({ 'display': 'block' })
+			})
+			$('.up').click(function() {
+				$('.show').css({ 'bottom': '-100%' })
+				$('.show').css({ 'transition': '.5s' })
+				$('.op').css({ 'transition': '.2s' })
+				$('.op').css({ 'display': 'none' })
+
+			})
+			$.imageFileVisible({
+
+				wrapSelector: "#image-wrap",
+				fileSelector: "#file",
+				width: 10 + 'rem',
+				height: 5 + 'rem'
+			});
+			$('#file').click(function() {
+				$('#image-wrap').html('')
+			})
+		});
+</script>
