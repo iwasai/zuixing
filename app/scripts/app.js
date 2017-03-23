@@ -52,3 +52,12 @@ angular.module('appApp', ['ui.router'])
 			})
 		$urlRouterProvider.otherwise('/list')
 	}])
+	
+	function Top(){
+			$('body').animate({scrollTop:0});
+		}
+		$("#Top").on({
+			'touchstart':function(){
+				Top();	
+			}
+		})

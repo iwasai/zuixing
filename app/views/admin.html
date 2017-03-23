@@ -36,30 +36,3 @@
 	<div class="op">
 	</div>
 </div>
-<script>
-	$(document).ready(function() {
-			$('.ul>li').click(function() {
-				$('.show').css({ 'bottom': '0' })
-				$('.show').css({ 'transition': '.5s' })
-				$('.op').css({ 'transition': '.2s' })
-				$('.op').css({ 'display': 'block' })
-			})
-			$('.up').click(function() {
-				$('.show').css({ 'bottom': '-100%' })
-				$('.show').css({ 'transition': '.5s' })
-				$('.op').css({ 'transition': '.2s' })
-				$('.op').css({ 'display': 'none' })
-
-			})
-			$.imageFileVisible({
-
-				wrapSelector: "#image-wrap",
-				fileSelector: "#file",
-				width: 10 + 'rem',
-				height: 5 + 'rem'
-			});
-			$('#file').click(function() {
-				$('#image-wrap').html('')
-			})
-		});
-</script>
