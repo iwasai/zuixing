@@ -4,10 +4,10 @@
 		<input type="button" value="发布" ng-click="fabu()"/>
 	</div>
 	<div id="content">
-		<input type="text" placeholder="新闻标题"/ style="margin-top: 1rem;">
-		<input type="text" placeholder="新闻来源" />
-		<input type="text" placeholder="发布时间" />
-		<input type="text" placeholder="发布人" />
+		<input type="text" placeholder="新闻标题"/ style="margin-top: 1rem;" ng-model="biaoti">
+		<input type="text" placeholder="新闻来源"  ng-model="laiyuan"/>
+		<input type="text" placeholder="发布时间"  ng-model="shijian"/>
+		<input type="text" placeholder="发布人"  ng-model="laizi"/>
 		<p>新闻内容:</p>
 		<textarea ng-model="xinwen"></textarea>
 	</div>
@@ -15,7 +15,7 @@
 		<p>已有新闻</p>
 		<ul class="ul">
 			<li ng-repeat="a in quan">
-				<p><span><img src="../images/Logo.png"></span><span>{{a.content}}<button ng-click="shan($index)" class="dian">删除</button></span></p>
+				<p><span><img src="../images/Logo.png"></span><span>{{a.title}}<button ng-click="shan($index)" class="dian">删除</button></span></p>
 				<p></p>
 			</li>
 		</ul>
