@@ -1,23 +1,78 @@
-<div class="sxl-zhuce"ng-controller="login">
+<div class="sxl-zhuce" ng-controller="login">
 	<div class="sxl-biao">
 			<img src="../images/sxl-tui.png">
 			会员注册
 	</div>
-	<input  type="text" placeholder="请输入账号(必填)" style="margin-top: 0.75rem;border-bottom: none;" ng-model="username"/>
-	<input  type="password" placeholder="请输入密码(必填)" style="border-bottom: none;" ng-model="password"/>
-	<input  type="text" placeholder="请输入姓名(必填)" style="border-bottom: none;" ng-model="name"/>
-	<input  type="text" placeholder="请输入邮箱" style="border-bottom: none;" ng-model="email"/>
-	<input  type="text" placeholder="请输入电话" style="border-bottom: none;"/ ng-model="phone">
-	<input  type="text" placeholder="请输入留言"/ ng-model="liuyan">
+	<p><input  type="text" placeholder="请输入用户名(必填)" style="margin-top: 0.75rem;border-bottom: none;" ng-model="username" id="yhm"/><b></b></p>
+	<p><input  type="password" placeholder="请输入密码(必填)" style="border-bottom: none;" ng-model="password"/ id="pwd"><b></b></p>
+	<p><input  type="text" placeholder="请输入姓名(必填)" style="border-bottom: none;" ng-model="name"/><b></b></p>
+	<p><input  type="text" placeholder="请输入邮箱(必填)" style="border-bottom: none;" ng-model="email"/  id="eml"><b></b></p>
+	<p><input  type="text" placeholder="请输入手机号码(必填)" style="border-bottom: none;"/ ng-model="phone" id="phe"><b></b></p>
+	<button class="an" ng-click="zhuce()" id="click">注册</button>
 	
-	<button class="an" ng-click="zhuce()">注册</button>
-	
-	<ul class="sxl-ming">
-		<li>账号</li>
-		<li>密码</li>
-		<li>姓名</li>
-		<li>邮箱</li>
-		<li>电话</li>
-		<li>留言</li>
-	</ul>
 </div>
+<script>
+	$(function(){
+		var useryz=/^[0-9a-zA-Z\u4e00-\u9fa5_]{3,16}$/;
+		var user,pwd,name,email,phone;
+		$("#yhm").bind('input propertychange',function(){
+			if($(this).val().match(useryz)){				
+					user=true;
+					$(this).next().html('√').css({'color':'#080','fontSize':'1rem'});
+					$("#click").removeAttr("disabled","disabled");
+			}else{
+				if($(this).val()==""){
+					$(this).next().html('');
+				}else{
+					$(this).next().html('用户名不能含有非法字符，长度为3-16位字符').css({'color':'red','fontSize':'0.5rem'});
+					$("#click").attr("disabled","disabled");
+				}
+			}
+		})
+		var pwdyz=/^\w{6,}$/;
+		$("#pwd").bind('input propertychange',function(){
+			if($(this).val().match(pwdyz)){
+				pwd=true;
+				$(this).next().html('√').css({'color':'#080','fontSize':'1rem'});
+				$("#click").removeAttr("disabled","disabled");
+			}else{
+				if($(this).val()==""){
+					$(this).next().html('');
+				}else{
+					$(this).next().html('密码长度不能少于6位').css({'color':'red','fontSize':'0.5rem'});
+					$("#click").attr("disabled","disabled");
+				}
+			}
+		})
+		var emailyz=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		$("#eml").bind('blur',function(){
+			if($(this).val().match(emailyz)){
+				email=true;
+				$(this).next().html('√').css({'color':'#080','fontSize':'1rem'});
+				$("#click").removeAttr("disabled","disabled");
+			}else{
+				if($(this).val()==""){
+					$(this).next().html('');
+				}else{
+					$(this).next().html('请填写正确的邮箱').css({'color':'red','fontSize':'0.5rem'});
+					$("#click").attr("disabled","disabled");
+				}
+			}
+		})
+		var phoneyz=/^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
+		$("#phe").bind('input propertychange',function(){
+			if($(this).val().match(phoneyz)){
+				email=true;
+				$(this).next().html('√').css({'color':'#080','fontSize':'1rem'});
+				$("#click").removeAttr("disabled","disabled");
+			}else{
+				if($(this).val()==""){
+					$(this).next().html('');
+				}else{
+					$(this).next().html('请填写正确的手机号码').css({'color':'red','fontSize':'0.5rem'});
+					$("#click").attr("disabled","disabled");
+				}
+			}
+		})
+	})
+</script>
