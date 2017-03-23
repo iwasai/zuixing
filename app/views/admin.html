@@ -1,22 +1,21 @@
-<div class='sth-admin'>
+<div class='sth-admin' ng-controller="anli">
 	<div class="release">
 		<span>新闻列表</span>
-		<input type="button" value="发布" />
+		<input type="button" value="发布" ng-click="fabu()"/>
 	</div>
 	<div id="content">
-		<div id="image-wrap"></div>
-		<input type="button" value="选择图片" id="but" />
-		<input type="file" id="file">
-	</div>
-	<div class="releaseContent">
-		<p>新闻内容</p>
-		<textarea></textarea>
+		<input type="text" placeholder="新闻标题"/ style="margin-top: 1rem;">
+		<input type="text" placeholder="新闻来源" />
+		<input type="text" placeholder="发布时间" />
+		<input type="text" placeholder="发布人" />
+		<p>新闻内容:</p>
+		<textarea ng-model="xinwen"></textarea>
 	</div>
 	<div class="releaseContent">
 		<p>已有新闻</p>
-		<ul class="ul" ng-repeat="a in data">
-			<li>
-				<p><span><img src="../images/a (1).gif"/></span><span>啊发顺丰发发生发发发发沙发怕就怕及哦啊跑福安市</span></p>
+		<ul class="ul">
+			<li ng-repeat="a in quan">
+				<p><span><img src="../images/Logo.png"></span><span>{{a.content}}<button ng-click="shan($index)" class="dian">删除</button></span></p>
 				<p></p>
 			</li>
 		</ul>

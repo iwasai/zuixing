@@ -35,17 +35,17 @@
     }
     input {
         float: right;
-        .w(150rem);
-        .h(70rem);
-        .fs(32rem);
-        margin-top: 1%;
-        border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
+        .w(120rem);
+        .h(60rem);
+        margin-top: 0.25rem;
+        border: none;
+        border-radius: 10px;
         color: #ce2122;
+        .fs(28rem)
     }
 }
 #content {
     width: 100%;
-    padding: 5%;
     .h(265rem);
     #image-wrap {
         .w(400rem);
@@ -62,16 +62,30 @@
             border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
         }
     }
-    > input:nth-child(2) {
-        margin-top: 10%;
-        .w(150rem);
-        .h(80rem);
-        margin-top: 1%;
-        border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
-        color: #fc5265;
-        .fs(28rem);
+    >input{
+            .w(596rem);
+            .h(96rem);
+            border:1px solid #CCCCCC;
+            .fs(25rem);
+            margin-left: 0.6rem;
+            padding-left: 2.8rem;
+            border-radius: 5px;
     }
-    #file {
+    p{
+        .fs(24rem);
+        margin-left: 0.6rem;
+        margin-top: 0.3rem;
+    }
+    textarea{
+         .w(596rem);
+            .h(200rem);
+            border:1px solid #CCCCCC;
+            .fs(25rem);
+            margin-left: 0.6rem;
+            border-radius: 5px;
+            margin-top: -0.1rem;
+    }
+        #file {
         margin-left: 3%;
         margin-top: -11%;
         .w(150rem);
@@ -89,37 +103,44 @@
         .fs(30rem);
         .lh(80rem);
         color: #FFF;
-        margin-bottom: 5%;
+        margin-top: 12rem;
     }
     > textarea {
         margin-left: 5%;
         .w(580rem);
         .h(200rem);
-        margin-bottom: 2%;
     }
     > ul {
-        width: 100%;
-        padding: 0 5%;
+        width: 95%;
+        margin: 0 auto;
         > li {
+            .h(130rem);
+            padding-top:0.5rem ;
             border-bottom: .05rem solid #CCCCCC;
-            padding-top: 3%;
             > p {
                 > span:nth-child(1) {
                         .w(200rem);
-                        .h(130rem);
+                        .h(100rem);
                         margin-right: 2%;
                     > img {
-                        .w(200rem);
-                        .h(130rem);
+                        .w(100rem);
+                        .h(100rem);
                     }
                 }
                 >span:nth-child(2){
                     display: inline-block;
-                    .w(360rem);
-                     .h(130rem);
+                     .w(470rem);
+                     .h(100rem);
                      .lh(40rem);
-                     .fs(28rem)
+                     .fs(24rem)
                 }
+            }
+            .dian{
+                .w(100rem);
+                .h(60rem);
+                border: none;
+                border-radius: 10px;
+                float: right;
             }
         }
         > li:last-child{
@@ -210,6 +231,7 @@
             }
         }
     }
+    
 }
 
 

@@ -1,19 +1,20 @@
+'use strict';
 
-
-//angular.module("appApp").controller("jgr",function($scope,$http){
-//	$http({
-//		url:"http://47.88.16.225:401/users/",
-//		method:"POST",
-//		data:$scope.sth
-//	}).then(function(e){
-//		var a=e.data.uid
-//		$http({
-//			url:"http://47.88.16.225:401/users/"+a,
-//			method:"get"
-//		}).then(function(e){
-//			if(e.data.level=="0"){
-//				$state.go()
-//			}
-//		})
-//	})
-//})
+/**
+   * @ngdoc overview
+   * @name appApp
+   * @description
+   * # appApp
+   *
+   * Main module of the application.
+   */
+angular.module("appApp")
+	.controller('jgr',['$scope','$http','$state',function($scope,$http,$state){
+		$http({
+				url:"http://47.88.16.225:406/news",
+				method:"get",
+			}).then(function(data){
+				console.log(data)
+				$scope.quan = data.data;
+			})
+	}])

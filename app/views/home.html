@@ -1,4 +1,4 @@
-<div class="sth-home">
+<div class="sth-home" ng-controller="jgr">
 	<div class="sth-head">
 		
 	</div>
@@ -32,31 +32,16 @@
 		</ul>
 	</div>
 	<div class="sth-news">
-		<ul>
+		<ul ui-sref="news">
 			<li></li>
 			<li>公司新闻</li>
 			<li> 〉 </li>
 		</ul>
 	</div>
-	<div class="sth-newsList">
+	<div class="sth-newsList" ng-repeat="d in quan">
 		<ul>
-			<li><img src="../images/a (1).gif"></li>
-			<li>啊实打实的那家吗是的哈口水电话及哦啊苏丹红爱爱</li>
-			<p>2017/06/18</p>
-		</ul>
-		<ul>
-			<li><img src="../images/a (1).gif"></li>
-			<li>啊实打实的那家吗是的哈口水电话及哦啊苏丹红爱爱</li>
-			<p>2017/06/18</p>
-		</ul>
-		<ul>
-			<li><img src="../images/a (1).gif"></li>
-			<li>啊实打实的那家吗是的哈口水电话及哦啊苏丹红爱爱</li>
-			<p>2017/06/18</p>
-		</ul>
-		<ul>
-			<li><img src="../images/a (1).gif"></li>
-			<li>啊实打实的那家吗是的哈口水电话及哦啊苏丹红爱爱</li>
+			<li><img src="../images/Logo.png"></li>
+			<li>{{d.content}}</li>
 			<p>2017/06/18</p>
 		</ul>
 	</div>
