@@ -4,8 +4,9 @@
 	</div>
 	<div class="wordsList">
 		<ul class="ul">
-			<li>wwww</li>
-			<li ng-repeat="a in arr">{{a.content}}<a href="javascript:;" ng-click="shanchu($index)">删除</a></li>
+			<li ng-repeat="a in arr" style="padding: 3% 0;padding-bottom:7%;border-bottom: 0.05rem solid #CCCCCC;">
+				<p style="color: #ce2122;font-size: .6rem;">{{a.name}}</p>
+				{{a.content}}<a href="javascript:;" ng-click="shanchu($index)" style="float: right;color:#FFFFFF;width: 3rem;height: 1.3rem;line-height: 1.3rem;text-align: center;text-decoration: none;font-size: .6rem;background: #ce2122;border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;">删除</a></li>
 		</ul>
 	</div>
 	<div class="footers">
