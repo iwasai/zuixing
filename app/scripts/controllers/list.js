@@ -10,7 +10,6 @@
  */
 angular.module('appApp')
 	.controller('list',['$scope','$http','$state',function($scope,$http,$state){
-		$scope.username = localStorage.getItem('username')
 		$scope.denglu = function(){
 			$http({
 				url:"http://47.88.16.225:406/users/login",
@@ -18,7 +17,8 @@ angular.module('appApp')
 				data:{
 					username:$scope.username,
 					password:$scope.password,
-					tel:$scope.phone
+					tel:$scope.phone,
+					level:1
 				}
 			}).then(function(data){
 				$scope.ti = data.data.uid;

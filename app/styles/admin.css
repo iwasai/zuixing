@@ -5,7 +5,8 @@
   text-decoration: none;
   font-family: "微软雅黑";
   font-size: 0.35rem;
-}
+}.
+
 .sth-admin {
   width: 100%;
   margin-bottom: 20%;
@@ -44,7 +45,7 @@
   border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
 }
 #content > div > img {
-  width: 10rem;
+  width: 14.9rem;
   height: 5rem;
   border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
 }
@@ -52,7 +53,7 @@
   margin-top: 10%;
   width: 3.75rem;
   height: 2rem;
-  margin-top: 1%;
+  margin-top: 0%;
   border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
   color: #fc5265;
   font-size: 0.7rem;
@@ -60,8 +61,8 @@
 #content #file {
   margin-left: 3%;
   margin-top: -11%;
-  width: 3.75rem;
-  height: 2rem;
+  width: 14.9rem;
+  height: 2.4rem;
   opacity: 0;
 }
 .releaseContent > p {

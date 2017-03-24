@@ -33,9 +33,9 @@ angular.module('appApp')
 				data:{
 					content:$scope.xinwen,
 					title:$scope.biaoti,
-					form:$scope.laizi,
-					timer:$scope.shijian,
-					silte:$scope.laiyuan
+					from:$scope.laizi,
+					time:$scope.shijian,
+					site:$scope.laiyuan
 				}
 			}).then(function(data){
 				console.log(data)

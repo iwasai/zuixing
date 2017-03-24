@@ -102,7 +102,8 @@ angular.module('appApp')
 					name:$scope.name,
 					email:$scope.email,
 					tel:$scope.phone,
-					liuyan:$scope.liuyan
+					liuyan:$scope.liuyan,
+					level:1
 				}
 			}).then(function(data){
 				console.log(data)
